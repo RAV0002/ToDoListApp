@@ -38,7 +38,6 @@ public class MainViewController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    String currentTask;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,9 +57,10 @@ public class MainViewController implements Initializable {
     }
 
     public void menuFileSave() {
-        System.out.println("menuBar/file/save clicked!!");
+        AppData.saveTasks(taskList);
     }
 
+    // Po naciśnięciu przycisku zmieniamy SCENE
     public void addNewTaskSceneChange(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("addTask-view.fxml"));
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -68,10 +68,20 @@ public class MainViewController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+    //Dodawanie nowego taska po pracy na drugiej scenie
     public void addNewTask(String title, String description){
         Task task = new Task(title, description);
         taskList.add(task);
         AppData.saveTasks(taskList);
+    }
+
+    // Usuwanie zaznaczonego taska
+    public void deleteTask(ActionEvent event){
+        int index = tasksListView.getSelectionModel().getSelectedIndex();
+        if (index >= 0) {
+            tasksListView.getItems().remove(index);
+        }
     }
 
 //    public void addTask(ActionEvent e) {
