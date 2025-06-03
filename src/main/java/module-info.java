@@ -5,5 +5,6 @@ module com.todoapp.todolistapp {
 
 
     opens com.todoapp.todolistapp to javafx.fxml;
+    opens Data to com.google.gson;
     exports com.todoapp.todolistapp;
 }

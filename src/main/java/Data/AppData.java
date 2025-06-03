@@ -17,7 +17,7 @@ public class AppData {
     private static final Gson gson = new Gson();
     private final List<Task> taskList = loadTasks();
 
-    public void saveTasks(List<Task> tasks) {
+    public static void saveTasks(List<Task> tasks) {
         try (FileWriter writer = new FileWriter(FILE_PATH)) {
             gson.toJson(tasks, writer);
         } catch (IOException e) {
@@ -25,7 +25,7 @@ public class AppData {
         }
     }
 
-    public List<Task> loadTasks() {
+    public static List<Task> loadTasks() {
         try (FileReader reader = new FileReader(FILE_PATH)){
             Type tasksListType = new TypeToken<List<Task>>(){}.getType();
             return gson.fromJson(reader, tasksListType);

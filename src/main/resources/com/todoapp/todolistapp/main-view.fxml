@@ -51,6 +51,6 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button fx:id="addNewTask" focusTraversable="false" layoutX="14.0" layoutY="540.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Add new task" />
+      <Button fx:id="addNewTask" focusTraversable="false" layoutX="14.0" layoutY="540.0" mnemonicParsing="false" onAction="#addNewTaskSceneChange" prefHeight="25.0" prefWidth="200.0" text="Add new task" />
    </children>
 </AnchorPane>
