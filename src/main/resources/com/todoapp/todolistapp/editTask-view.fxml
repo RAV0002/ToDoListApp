@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="709.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.todoapp.todolistapp.AddTaskViewController">
+<AnchorPane prefHeight="709.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.todoapp.todolistapp.EditTaskViewController">
    <children>
-      <Label alignment="CENTER" layoutX="50.0" layoutY="14.0" prefHeight="50.0" prefWidth="1112.0" text="Title">
+      <Label alignment="CENTER" layoutX="53.0" layoutY="14.0" prefHeight="50.0" prefWidth="1112.0" text="Title">
          <font>
             <Font size="30.0" />
          </font>
@@ -19,9 +19,9 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="titleTextField" layoutX="50.0" layoutY="64.0" prefHeight="50.0" prefWidth="1112.0" />
-      <TextArea fx:id="descriptionTextField" layoutX="53.0" layoutY="169.0" prefHeight="440.0" prefWidth="1112.0" wrapText="true" />
       <Button layoutX="540.0" layoutY="617.0" mnemonicParsing="false" onAction="#saveTask" prefHeight="50.0" prefWidth="140.0" text="Save" />
+      <TextField fx:id="titleTextField" layoutX="50.0" layoutY="64.0" prefHeight="50.0" prefWidth="1112.0" />
+      <TextArea fx:id="descriptionTextField" layoutX="54.0" layoutY="169.0" prefHeight="440.0" prefWidth="1112.0" wrapText="true" />
       <Button layoutX="539.0" layoutY="676.0" mnemonicParsing="false" onAction="#exitButton" prefHeight="18.0" prefWidth="140.0" text="Exit" />
    </children>
 </AnchorPane>

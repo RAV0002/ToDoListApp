@@ -15,7 +15,7 @@ public class AppData {
 
     private static final String FILE_PATH = "src/main/resources/tasks.json";
     private static final Gson gson = new Gson();
-    private final List<Task> taskList = loadTasks();
+    private static final List<Task> taskList = loadTasks();
 
     public static void saveTasks(List<Task> tasks) {
         try (FileWriter writer = new FileWriter(FILE_PATH)) {
