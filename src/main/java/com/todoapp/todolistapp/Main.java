@@ -14,6 +14,8 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("ToDoList by RAV0002");
         stage.setScene(scene);
+        stage.setMinHeight(706);
+        stage.setMinWidth(965);
         stage.show();
     }
 
